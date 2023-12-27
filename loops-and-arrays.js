@@ -16,8 +16,6 @@ for( let n = 0; n<names.length; n++)
     console.log(names[n]+'je');
 }
 
-
-
 console.log('');
 // ==========================================
 // Opdracht 2
@@ -25,18 +23,28 @@ console.log('');
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
 // ==========================================
 
-const numbers = [2, 4, 5, 29, 38];
-
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
 // console.log(numbers) geeft: [2, 4, 5, 29, 38];
 // Na jouw script zie je de aangepaste waardes:
 // console.log(numbers) geeft: [ 4, 8, 15, 87, 76 ];
 
+const numbers = [2, 4, 5, 29, 38];
+console.log(numbers);
 
-
-
-
+for(let n = 0; n< numbers.length; n++ )
+{
+    if(numbers[n]%2 ===0 )// the modulus of even numbers is equal to 0
+    {
+        numbers[n] = numbers[n]*2;
+    }
+    else
+    {
+        numbers[n] = numbers[n]*3;
+    }
+}
+console.log(numbers);
+console.log('');
 // ==========================================
 // Opdracht 3
 // Schrijf een script dat voor de maat van ieder vierkant in onderstaande array, het volume uitrekent.
@@ -45,7 +53,6 @@ const numbers = [2, 4, 5, 29, 38];
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
 // ==========================================
 
-const squares = [30, 2, 8, 24, 11];
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
@@ -59,6 +66,16 @@ const squares = [30, 2, 8, 24, 11];
 //   'Het volume van 24 is 13824',
 //   'Het volume van 11 is 1331'
 // ]
+const squares = [30, 2, 8, 24, 11];
+console.log(squares);
+let zin = null;
 
+for(let n= 0; n < squares.length; n++)
+{
+    zin = 'Het volume van '+squares[n]+' is ';
+    squares[n] =  Math.pow(squares[n],3);//het volume van een kubus is lengte van een zijde tot de 3e macht (oftewwel x^3).
+    squares[n] = zin + squares[n];
+}
+console.log(squares);
 
 
