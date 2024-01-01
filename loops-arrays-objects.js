@@ -15,11 +15,12 @@ const scores = [
 // 92
 // 66
 // ==========================================
+for(let n = 0; n < scores.length;n++)
+{
+    console.log(scores[n].score);
+}
 
-
-
-
-
+console.log(' ');//witregel voor volgende opdracht
 // ==========================================
 // Opdracht 1b
 // Breid je script uit door voor iedere student de score om te rekenen naar een letter en dit in de terminal te printen
@@ -31,10 +32,33 @@ const scores = [
 // A
 // D
 // ==========================================
+for(let n = 0; n < scores.length;n++)
+{
+    if(scores[n].score < 60)
+    {
+        scores[n].grade = 'F';
+    }
+    else if(scores[n].score>=60 && scores[n].score < 70)
+    {
+        scores[n].grade = 'D';
+    }
+    else if(scores[n].score>=70 && scores[n].score < 80)
+    {
+        scores[n].grade = 'C';
+    }
+    else if(scores[n].score>=80 && scores[n].score < 90)
+    {
+        scores[n].grade = 'B';
+    }
+    else if(scores[n].score>=90 && scores[n].score <= 100)
+    {
+        scores[n].grade = 'A';
+    }
 
+    console.log(scores[n].grade);
+}
 
-
-
+console.log('');//witregel
 
 // ==========================================
 // Opdracht 1c
@@ -49,7 +73,9 @@ const scores = [
 //  ];
 // ==========================================
 
-
+//zie vorige opdracht voor het toekennen van de values van 'grade'
+console.log(scores);
+console.log('');//witregel
 
 
 
@@ -77,15 +103,27 @@ const NOVIEmployees = [
 
 
 
-
-
+console.log(NOVIEmployees);
+for(let n = 0; n < NOVIEmployees.length; n++)
+{
+    NOVIEmployees[n].email = NOVIEmployees[n].firstName + '.' + NOVIEmployees[n].lastName + '@novi.nl';
+}
+console.log('Novi employees with added email addresses')
+console.log(NOVIEmployees);
+console.log('');//witregel
 
 // Opdracht 2-BONUS
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
 // ==========================================
 
+for( let n = 0; n < NOVIEmployees.length; n++)
+{
+    NOVIEmployees[n].email = NOVIEmployees[n].email.toLowerCase();
+}
+console.log('Novi employees with lowercase email addresses')
+console.log(NOVIEmployees);
 
-
+console.log('');//witregel
 
 // ==========================================
 // Opdracht 3
@@ -132,4 +170,42 @@ const students = [
 // ==========================================
 
 
+for( let n = 0; n <students.length; n++)
+{
+    switch(students[n].zipCode)
+    {
+        case '3513':
+            students[n].neighborhood= 'Pijlsweerd';
+            break;
+
+        case '3514':
+            students[n].neighborhood = 'Vogelenbuurt';
+            break;
+
+        case '3512':
+            students[n].neighborhood = 'Binnenstad';
+            break;
+
+        case '3531':
+            students[n].neighborhood = 'Lombok';
+            break;
+
+        case '3572':
+            students[n].neighborhood = 'Wittevrouwen';
+            break;
+
+        case '3581':
+            students[n].neighborhood = 'Oudwijk';
+            break;
+
+        case '3583':
+            students[n].neighborhood = 'Schildersbuurt';
+            break;
+
+        default:
+            break;
+    }
+}
+console.log('student neighborhoods:');
+console.log(students);
 
